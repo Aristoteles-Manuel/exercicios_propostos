@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jogo da Senha</h1>
+    <p>
+        Número: <input type="number" name="n" id="txtn">
+        <input type="button" value="mostrar" onclick="mostrar()">
+    </p>
+    <div id="res">Resultado:</div>
+    <script>
+        function mostrar(){
+            var num1=window.document.getElementById('txtn')
+            
+            var res =window.document.getElementById('res')
+            var r =Math.floor(Math.random()*3)
+            
+            var n1=Number(num1.value)
+             
+            if(n==r){
+               res.innerHTML+=`Você ganhou! eu pensei mesmo na sequência ${r}` 
+            }else if(n!=r){
+                res.innerHTML+=`perdeu eu pensei em ${r}`
+            }
+            
+        }
+    </script>
+</body>
+</html>

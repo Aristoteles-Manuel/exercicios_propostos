@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Idade</h1>
+    <script>
+        var anon= Number(window.prompt('Digite seu ano de nascimento'))
+        var tempo =new Date()
+        var anoat = tempo.getFullYear()
+        var idade =anoat-anon
+        if(idade<=12){
+            alert('Criança de '+idade+' anos')
+        }else if (idade>=13 && idade<18){
+            alert('Adolescente de '+idade+' anos')
+        }else if (idade>=18 && idade<=60){
+            alert('Adulto de '+idade+' anos')
+        }else{
+            alert('Idoso de '+idade+' anos')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Par ou Impar</h1>
+    <p>
+        <input type="number" name="n" id="txtn">
+        <input type="button" value="mostrar" onclick="mostrar()">
+        <div id="res"></div>
+    </p>
+    <script>
+        function mostrar(){
+            var num=window.document.querySelector('input#txtn')
+        var res=window.document.querySelector('div#res')
+        n = Number(num.value)
+        res.innerHTML='Resultado: '
+        if(n%2==0){
+            res.innerHTML+=(`${n} é um número <strong>par</strong>`)
+        }else{
+            res.innerHTML+=(`${n} é um número <strong>impar</strong>`) 
+        }
+        }
+        
+    </script>
+</body>
+</html>

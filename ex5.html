@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média</h1>
+    <div id="res">Resultado:</div>
+    <script>
+        var num1= Number(window.prompt('Digite o primeiro número')) 
+        var num2= Number(window.prompt('Digite o segundo número')) 
+        var num3= Number(window.prompt('Digite o terceiro número')) 
+        var média =(num1+num2+num3)/3
+        var res=window.document.querySelector('div#res')
+        if(média>=14){
+            res.innerHTML+=` Sua média é de ${média} Aprovado!`
+        }else if (média>=10 && média<14){
+            res.innerHTML+=`Sua média é de ${média} Exame!`
+
+        }else if (média<10){
+            res.innerHTML+=`Sua média é de ${média} Reprovado!`
+        }
+    </script>
+</body>
+</html>

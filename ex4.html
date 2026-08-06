@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dobro e Triplo</h1>
+    <p>
+        Número:<input type="number" name="n" id="txtn">
+        <input type="button" value="mostrar" onclick="mostrar()">
+        <div id="res">Resultado:</div>
+    </p>
+    <script>
+        function mostrar(){
+            var num =window.document.querySelector('input#txtn')
+            var res =window.document.getElementById('res')
+            var n = Number(num.value)
+            res.innerHTML+=`O dobro de ${n} é ${n*2} e o seu triplo é ${n*3}`
+        }
+
+    </script>
+</body>
+</html>

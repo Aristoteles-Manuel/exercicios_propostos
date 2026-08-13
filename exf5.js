@@ -19,3 +19,10 @@ const maior =(a,b) =>{
 console.log(maior(4,6))
 const m = (a,b) => a>b ? a : b
 console.log(m(3,7))
+function multiplicar(a,b){
+    return a*b
+}
+function calcular (a,b,operacao){
+    return operacao(a,b)
+}
+console.log(calcular(5,4,multiplicar))

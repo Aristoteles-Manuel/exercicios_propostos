@@ -1,13 +1,13 @@
-let num1 = document.querySelector('input#n1')
+let num1= document.querySelector('input#n1')
 let num2 = document.querySelector('input#n2')
-let sinal = document.querySelector('input#sinal')
+let sinal1 = document.querySelector('input#sinal')
 let res = document.querySelector('div#resultado')
-let n1 = Number(num1.value)
-let n2 = Number(num2.value)
 
 function calcular(a,b,operacao){
     return operacao(a,b)
-}
+    }
+
+
 function somar(a,b){
     return a+b
 }
@@ -25,12 +25,19 @@ function sinal(tipo){
         return somar
     }else if(tipo== '-'){
         return subtrair
-    }else if(tipo=='*'){
+    }else if(tipo=='x'){
         return multiplicar
     }else if (tipo== '/'){
         return divisao
     }
 }
-let tipo= sinal('+')
-let resultado = calcular(51,5,tipo)
-console.log(resultado)
+function executar(){
+    let n1=Number(num1.value)
+    let n2=Number(num2.value)
+    let tipo = sinal1.value
+    let operacao = sinal(tipo)
+    let resultado = calcular(n1,n2,operacao)
+    res.innerHTML=`${resultado}`
+
+}
+    

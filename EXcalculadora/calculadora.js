@@ -29,14 +29,28 @@ function sinal(tipo){
         return multiplicar
     }else if (tipo== '/'){
         return divisao
+    }else if(tipo=== ''){
+        res.innerHTML=`escolha uma operação`
+    }else{
+        alert('sinal iválido use um dos seguintes (+, -, x, /)')
     }
 }
 function executar(){
     let n1=Number(num1.value)
     let n2=Number(num2.value)
+    if(n1==0){
+        res.innerHTML=`Digite o um numero na primeira caixa `
+    }else if (n2==0){
+        res.innerHTML=`Digite o um numero na segunda  caixa `
+
+    }else if(n1==0 && n2==0){
+        res.innerHTML=`Digite valores nas duas caixas caixa `
+    }
+
     let tipo = sinal1.value
     let operacao = sinal(tipo)
     let resultado = calcular(n1,n2,operacao)
+    
     res.innerHTML=`${resultado}`
 
 }

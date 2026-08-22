@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Ano de Nascimento: <input type="number" name="num" id="num"> <input type="button" value="mostrar" onclick="mostrar()">
+    <div id="res"></div>
+    <script>
+        function mostrar(){
+         let ano = window.document.querySelector('input#num')
+        let resultado = window.document.querySelector('div#res')
+        let atual = new Date()
+        let anoAtual = atual.getFullYear()
+        let anoNascimento = Number(ano.value)
+        let idade = anoAtual-anoNascimento
+        resultado.innerHTML=`${idade}`
+
+        }
+        
+    </script>
+</body>
+</html>

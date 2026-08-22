@@ -15,7 +15,7 @@ let s = executar(10, triplo)
 console.log(s)*/
 
 
-function calcular(a,b,operacao){
+/*function calcular(a,b,operacao){
     return operacao(a,b)
 }
 function somar(a,b){
@@ -43,4 +43,35 @@ function sinal(tipo){
 }
 let tipo= sinal('/')
 let resultado = calcular(20,5,tipo)
-console.log(resultado)
+console.log(resultado)*/
+
+function executar(operacao){
+    let agora = new Date()
+    let hora = agora.getHours()
+    operacao(hora)
+     
+    
+}
+function bomDia(hora){
+    if(hora<12){
+        console.log(`Bom Dia  são ${hora} horas`) 
+    }
+    
+}
+
+function boaTarde(hora){
+    if (hora>=12 && hora<=17){
+          console.log(`Boa Tarde são ${hora} horas`)
+    }
+    
+}
+
+function boaNoite(hora){
+    if(hora>=18 && hora<24){ 
+        console.log(`Boa Noite são ${hora} horas`)
+    }
+   
+}
+executar(bomDia)
+executar(boaTarde)
+executar(boaNoite)

@@ -9,10 +9,12 @@
     <h1>Dobro e Triplo</h1>
     <p>
         Número:<input type="number" name="n" id="txtn">
-        <input type="button" value="mostrar" onclick="mostrar()">
+        <button id="btn">Mostrar</button>
         <div id="res">Resultado:</div>
     </p>
     <script>
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', mostrar)
         function mostrar(){
             var num =window.document.querySelector('input#txtn')
             var res =window.document.getElementById('res')

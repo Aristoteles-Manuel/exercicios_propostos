@@ -7,10 +7,13 @@
 </head>
 <body>
     <h1 style="text-align: center;">Operacões com números.</h1>
-    <p>Numeros:<input type="number" name="n1" id="txtn1"> + <input type="number" name="n2" id="txtn2"> <input type="button" value="calcular" onclick="calcular()"></p>
+    <p>Numeros:<input type="number" name="n1" id="txtn1">  <input type="number" name="n2" id="txtn2"> 
+    <button id="btn">calcular</button>
     <div id="res">Resultado:</div>
     <script>
-       var p=window.prompt( `Informe a opercão que pretende realizar soma para soma, sub para subtração, Mult para multiplicação e div para divisão.`)
+       var opercao=window.prompt( `Informe a opercão que pretende realizar soma para soma, sub para subtração, Mult para multiplicação e div para divisão.`)
+       const btn = window.document.getElementById('btn')
+          btn.addEventListener('click', calcular)
         function calcular(){
            var num1=window.document.getElementById('txtn1')
            var num2=window.document.getElementById('txtn2')
@@ -18,24 +21,23 @@
            var n1 =Number(num1.value)
            var n2 =Number(num2.value)
           
-           if(p=='soma'){
+           if(opercao=='soma'){
              var soma = n1 + n2
-             res.innerHTML+=`${soma}`
-           }else if(p=='Mult'){
+             res.innerHTML=`${soma}`
+           }else if(opercao=='Mult'){
             var mult= n1*n2
-             res.innerHTML+=`${mult}`
-           }else if(p =='div'){
+             res.innerHTML=`${mult}`
+           }else if(opercao =='div'){
             var div =n1/n2 
-             res.innerHTML+=`${div}`
-           }else if(p=='sub'){
+             res.innerHTML=`${div}`
+           }else if(opercao=='sub'){
             var sub=n1-n2
-             res.innerHTML+=`${sub}`
+             res.innerHTML=`${sub}`
 
            }else{
             alert('Retroceda a página e escolha uma operação')
            }
            
-
 
         }
     </script>

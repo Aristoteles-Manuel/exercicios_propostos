@@ -7,6 +7,7 @@ for (let c =1; c<=10; c++){
         return c*2
     })
     console.log(nova)
+    
 }*/
 function s(){
     let lista = [4,1,3,2]

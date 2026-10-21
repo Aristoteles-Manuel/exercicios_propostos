@@ -18,10 +18,15 @@
         var res=window.document.querySelector('div#res')
         n = Number(num.value)
         res.innerHTML='Resultado: '
-        if(n%2==0){
+        if(n%2==0 && n!=0){
             res.innerHTML+=(`${n} é um número <strong>par</strong>`)
-        }else{
+        }
+        else if(n%2!=0){
             res.innerHTML+=(`${n} é um número <strong>impar</strong>`) 
+        }
+        else{
+            res.innerHTML+=`${n} está fora da condição entre par e ímpar.`
+            
         }
         }
         

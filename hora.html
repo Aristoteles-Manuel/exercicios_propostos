@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <button id="btn">Quantas horas são?</button>
+    <div id="res"></div>
+    <script>
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', executar)
+        let res = document.querySelector('div#res')
+        function executar(operacao){
+        let agora = new Date()
+        let hora = agora.getHours()
+        operacao(hora)
+
+     }
+
+            function bomDia(hora){
+                if(hora<12){
+                    res.innerHTML=(`Bom Dia  são ${hora} horas`) 
+                }
+                
+            }
+
+            function boaTarde(hora){
+                if (hora>=12 && hora<=17){
+                    res.innerHTML=(`Boa Tarde são ${hora} horas`)
+                }
+                
+            }
+
+            function boaNoite(hora){
+                if(hora>=18 && hora<24){ 
+                    res.innerHTML=(`Boa Noite são ${hora} horas`)
+                }
+            
+            }
+            executar(bomDia)
+            executar(boaTarde)
+            executar(boaNoite)
+    </script>
+</body>
+</html>

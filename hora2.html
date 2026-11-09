@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Hora do Dia</h1>
+    <button id="btn">Quantas horas são?</button>
+    <div id="res"></div>
+    <script>
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', executar)
+        function executar(){
+        let res = document.querySelector('div#res')
+        let agora =new Date()
+        let hora= agora.getHours()
+        res.innerHTML=(` São ${hora} horas `)
+        switch(true){
+    
+        case  hora<12:
+        res.innerHTML+=(`Bom Dia`)
+        break
+        case hora>=12 && hora<=17:
+        res.innerHTML+=(`Boa Tarde`)
+        break
+       case hora>=18 && hora<24:
+        res.innerHTML+=(`Boa Noite`)
+             }
+        }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+   
+
+}
+main{
+    background-color:  #F2D8C9;
+    width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+div{
+    background-color:rgb(69, 37, 37);
+   border:1px  solid rgba(0, 0, 0, 0.459);
+    border-radius: 10px;
+    color: white;
+}

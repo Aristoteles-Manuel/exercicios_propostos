@@ -6,8 +6,6 @@ let res = document.querySelector('div#resultado')
 function calcular(a,b,operacao){
     return operacao(a,b)
     }
-
-
 function somar(a,b){
     return a+b
 }
